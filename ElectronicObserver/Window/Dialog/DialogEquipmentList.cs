@@ -75,6 +75,7 @@ namespace ElectronicObserver.Window.Dialog
 
 			#endregion
 
+			TopMenu_File_CopyUntranslated.Visible = Utility.Configuration.Config.Debug.EnableDebugMenu;
 		}
 
 		private void DialogEquipmentList_Load(object sender, EventArgs e)
@@ -536,11 +537,29 @@ namespace ElectronicObserver.Window.Dialog
 
 		}
 
-        /// <summary>
-        /// 「艦隊分析」装備情報反映用
-        /// https://kancolle-fleetanalysis.firebaseapp.com/
-        /// </summary>
-        private void TopMenu_File_CopyToFleetAnalysis_Click(object sender, EventArgs e)
+		private void TopMenu_File_CopyUntranslated_Click(object sender, EventArgs e)
+		{
+			string output = "";
+			foreach (EquipmentDataMaster equipment in KCDatabase.Instance.MasterEquipments.Values)
+			{
+				if (!equipment.Translated)
+				{
+					output += $"  <Item>\r\n";
+					output += $"    <TR-Name>{(string)equipment.RawData.api_name}</TR-Name>\r\n";
+					output += $"    <JP-Name>{equipment.Name}</JP-Name>\r\n";
+					output += $"  </Item>\r\n";
+				}
+			}
+
+			if (!string.IsNullOrEmpty(output))
+				Clipboard.SetText(output);
+		}
+
+		/// <summary>
+		/// 「艦隊分析」装備情報反映用
+		/// https://kancolle-fleetanalysis.firebaseapp.com/
+		/// </summary>
+		private void TopMenu_File_CopyToFleetAnalysis_Click(object sender, EventArgs e)
         {
             Clipboard.SetText(
                 "[" + string.Join(",", KCDatabase.Instance.Equipments.Values.Where(eq => eq?.IsLocked ?? false)

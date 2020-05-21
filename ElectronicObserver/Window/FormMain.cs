@@ -1504,6 +1504,10 @@ namespace ElectronicObserver.Window
 			new Dialog.DialogExpeditionCheck().Show(this);
 		}
 
+		private void StripMenu_Tool_SortieHistory_Click(object sender, EventArgs e)
+		{
+			new Dialog.DialogSortieHistory().Show(this);
+		}
 
 		private void StripMenu_File_Layout_LockLayout_Click(object sender, EventArgs e)
 		{
@@ -1690,9 +1694,6 @@ namespace ElectronicObserver.Window
 
 
 
-
 		#endregion
-
-
-    }
+	}
 }

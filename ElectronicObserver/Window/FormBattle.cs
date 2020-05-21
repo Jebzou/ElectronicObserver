@@ -190,6 +190,8 @@ namespace ElectronicObserver.Window
 						SetHPBar(bm.BattleDay);
 						SetDamageRate(bm);
 
+						KCDatabase.Instance.Node.BattleData = bm.BattleDay;
+
 						BaseLayoutPanel.Visible = !hideDuringBattle;
 					}
 					break;
@@ -201,6 +203,8 @@ namespace ElectronicObserver.Window
 						SetNightBattleEvent(bm.BattleNight.NightInitial);
 						SetHPBar(bm.BattleNight);
 						SetDamageRate(bm);
+
+						KCDatabase.Instance.Node.BattleData = bm.BattleNight;
 
 						BaseLayoutPanel.Visible = !hideDuringBattle;
 					}
@@ -217,6 +221,8 @@ namespace ElectronicObserver.Window
 						SetHPBar(bm.BattleNight);
 						SetDamageRate(bm);
 
+						KCDatabase.Instance.Node.BattleData = bm.BattleNight;
+
 						BaseLayoutPanel.Visible = !hideDuringBattle;
 					}
 					break;
@@ -230,6 +236,8 @@ namespace ElectronicObserver.Window
 						SetAerialWarfare(bm.BattleDay.JetAirBattle, bm.BattleDay.AirBattle, ((BattleAirBattle)bm.BattleDay).AirBattle2);
 						SetHPBar(bm.BattleDay);
 						SetDamageRate(bm);
+
+						KCDatabase.Instance.Node.BattleData = bm.BattleDay;
 
 						BaseLayoutPanel.Visible = !hideDuringBattle;
 					}
@@ -256,6 +264,8 @@ namespace ElectronicObserver.Window
 						SetHPBar(bm.BattleDay);
 						SetDamageRate(bm);
 
+						KCDatabase.Instance.Node.BattleData = bm.BattleNight;
+
 						BaseLayoutPanel.Visible = !hideDuringBattle;
 					}
 					break;
@@ -276,6 +286,8 @@ namespace ElectronicObserver.Window
 						SetHPBar(bm.BattleDay);
 						SetDamageRate(bm);
 
+						KCDatabase.Instance.Node.BattleData = bm.BattleDay;
+
 						BaseLayoutPanel.Visible = !hideDuringBattle;
 					}
 					break;
@@ -290,6 +302,8 @@ namespace ElectronicObserver.Window
 						SetHPBar(bm.BattleDay);
 						SetDamageRate(bm);
 
+						KCDatabase.Instance.Node.BattleData = bm.BattleDay;
+
 						BaseLayoutPanel.Visible = !hideDuringBattle;
 					}
 					break;
@@ -301,6 +315,8 @@ namespace ElectronicObserver.Window
 						SetNightBattleEvent(bm.BattleNight.NightInitial);
 						SetHPBar(bm.BattleNight);
 						SetDamageRate(bm);
+
+						KCDatabase.Instance.Node.BattleData = bm.BattleNight;
 
 						BaseLayoutPanel.Visible = !hideDuringBattle;
 					}
@@ -316,6 +332,8 @@ namespace ElectronicObserver.Window
 						SetNightBattleEvent(bm.BattleNight.NightInitial);
 						SetHPBar(bm.BattleNight);
 						SetDamageRate(bm);
+
+						KCDatabase.Instance.Node.BattleData = bm.BattleNight;
 
 						BaseLayoutPanel.Visible = !hideDuringBattle;
 					}
@@ -340,6 +358,8 @@ namespace ElectronicObserver.Window
 
 						SetHPBar(battle);
 						SetDamageRate(bm);
+
+						KCDatabase.Instance.Node.BattleData = bm.BattleNight;
 
 						BaseLayoutPanel.Visible = !hideDuringBattle;
 					}

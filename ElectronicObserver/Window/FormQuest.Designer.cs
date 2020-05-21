@@ -62,11 +62,12 @@
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.ManuMain_QuestTitle = new System.Windows.Forms.ToolStripMenuItem();
             this.ManuMain_QuestDescription = new System.Windows.Forms.ToolStripMenuItem();
+            this.ManuMain_QuestTranslate = new System.Windows.Forms.ToolStripMenuItem();
             this.MenuMain_GoogleQuest = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.MenuMain_Initialize = new System.Windows.Forms.ToolStripMenuItem();
             this.ToolTipInfo = new System.Windows.Forms.ToolTip(this.components);
-            this.ManuMain_QuestTranslate = new System.Windows.Forms.ToolStripMenuItem();
+            this.ManuMain_QuestCopy = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.QuestView)).BeginInit();
             this.MenuProgress.SuspendLayout();
             this.MenuMain.SuspendLayout();
@@ -139,8 +140,8 @@
             // 
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.QuestView_Type.DefaultCellStyle = dataGridViewCellStyle2;
-			this.QuestView_Type.HeaderText = GeneralRes.Type;
-			this.QuestView_Type.Name = "QuestView_Type";
+            this.QuestView_Type.HeaderText = global::ElectronicObserver.Window.GeneralRes.Type;
+            this.QuestView_Type.Name = "QuestView_Type";
             this.QuestView_Type.ReadOnly = true;
             this.QuestView_Type.Width = 20;
             // 
@@ -148,16 +149,16 @@
             // 
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.QuestView_Category.DefaultCellStyle = dataGridViewCellStyle3;
-			this.QuestView_Category.HeaderText = GeneralRes.Category;
-			this.QuestView_Category.Name = "QuestView_Category";
+            this.QuestView_Category.HeaderText = global::ElectronicObserver.Window.GeneralRes.Category;
+            this.QuestView_Category.Name = "QuestView_Category";
             this.QuestView_Category.ReadOnly = true;
             this.QuestView_Category.Width = 40;
             // 
             // QuestView_Name
             // 
             this.QuestView_Name.FillWeight = 200F;
-			this.QuestView_Name.HeaderText = GeneralRes.QuestName;
-			this.QuestView_Name.Name = "QuestView_Name";
+            this.QuestView_Name.HeaderText = global::ElectronicObserver.Window.GeneralRes.QuestName;
+            this.QuestView_Name.Name = "QuestView_Name";
             this.QuestView_Name.ReadOnly = true;
             this.QuestView_Name.Width = 143;
             // 
@@ -165,8 +166,8 @@
             // 
             this.QuestView_Progress.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.QuestView_Progress.ContextMenuStrip = this.MenuProgress;
-			this.QuestView_Progress.HeaderText = GeneralRes.Progress;
-			this.QuestView_Progress.Name = "QuestView_Progress";
+            this.QuestView_Progress.HeaderText = global::ElectronicObserver.Window.GeneralRes.Progress;
+            this.QuestView_Progress.Name = "QuestView_Progress";
             this.QuestView_Progress.ReadOnly = true;
             this.QuestView_Progress.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
@@ -184,15 +185,15 @@
             // 
             this.MenuProgress_Increment.Name = "MenuProgress_Increment";
             this.MenuProgress_Increment.Size = new System.Drawing.Size(150, 22);
-			this.MenuProgress_Increment.Text = GeneralRes.IncrementByOne;
-			this.MenuProgress_Increment.Click += new System.EventHandler(this.MenuProgress_Increment_Click);
+            this.MenuProgress_Increment.Text = global::ElectronicObserver.Window.GeneralRes.IncrementByOne;
+            this.MenuProgress_Increment.Click += new System.EventHandler(this.MenuProgress_Increment_Click);
             // 
             // MenuProgress_Decrement
             // 
             this.MenuProgress_Decrement.Name = "MenuProgress_Decrement";
             this.MenuProgress_Decrement.Size = new System.Drawing.Size(150, 22);
-			this.MenuProgress_Decrement.Text = GeneralRes.DecrementByOne;
-			this.MenuProgress_Decrement.Click += new System.EventHandler(this.MenuProgress_Decrement_Click);
+            this.MenuProgress_Decrement.Text = global::ElectronicObserver.Window.GeneralRes.DecrementByOne;
+            this.MenuProgress_Decrement.Click += new System.EventHandler(this.MenuProgress_Decrement_Click);
             // 
             // toolStripSeparator3
             // 
@@ -215,11 +216,12 @@
             this.ManuMain_QuestTitle,
             this.ManuMain_QuestDescription,
             this.ManuMain_QuestTranslate,
+            this.ManuMain_QuestCopy,
             this.MenuMain_GoogleQuest,
             this.toolStripSeparator4,
             this.MenuMain_Initialize});
             this.MenuMain.Name = "MenuMain";
-            this.MenuMain.Size = new System.Drawing.Size(288, 192);
+            this.MenuMain.Size = new System.Drawing.Size(288, 214);
             this.MenuMain.Opening += new System.ComponentModel.CancelEventHandler(this.MenuMain_Opening);
             // 
             // MenuMain_QuestFilter
@@ -299,39 +301,39 @@
             this.MenuMain_ColumnFilter_Progress});
             this.MenuMain_ColumnFilter.Name = "MenuMain_ColumnFilter";
             this.MenuMain_ColumnFilter.Size = new System.Drawing.Size(287, 22);
-			this.MenuMain_ColumnFilter.Text = GeneralRes.FilterBy;
-			// 
-			// MenuMain_ColumnFilter_State
-			// 
-			this.MenuMain_ColumnFilter_State.CheckOnClick = true;
+            this.MenuMain_ColumnFilter.Text = global::ElectronicObserver.Window.GeneralRes.FilterBy;
+            // 
+            // MenuMain_ColumnFilter_State
+            // 
+            this.MenuMain_ColumnFilter_State.CheckOnClick = true;
             this.MenuMain_ColumnFilter_State.Name = "MenuMain_ColumnFilter_State";
             this.MenuMain_ColumnFilter_State.Size = new System.Drawing.Size(140, 22);
-			this.MenuMain_ColumnFilter_State.Text = GeneralRes.InProgressFilter;
-			this.MenuMain_ColumnFilter_State.Click += new System.EventHandler(this.MenuMain_ColumnFilter_Click);
+            this.MenuMain_ColumnFilter_State.Text = global::ElectronicObserver.Window.GeneralRes.InProgressFilter;
+            this.MenuMain_ColumnFilter_State.Click += new System.EventHandler(this.MenuMain_ColumnFilter_Click);
             // 
             // MenuMain_ColumnFilter_Type
             // 
             this.MenuMain_ColumnFilter_Type.CheckOnClick = true;
             this.MenuMain_ColumnFilter_Type.Name = "MenuMain_ColumnFilter_Type";
             this.MenuMain_ColumnFilter_Type.Size = new System.Drawing.Size(140, 22);
-			this.MenuMain_ColumnFilter_Type.Text = GeneralRes.TypeFilter;
-			this.MenuMain_ColumnFilter_Type.Click += new System.EventHandler(this.MenuMain_ColumnFilter_Click);
+            this.MenuMain_ColumnFilter_Type.Text = global::ElectronicObserver.Window.GeneralRes.TypeFilter;
+            this.MenuMain_ColumnFilter_Type.Click += new System.EventHandler(this.MenuMain_ColumnFilter_Click);
             // 
             // MenuMain_ColumnFilter_Category
             // 
             this.MenuMain_ColumnFilter_Category.CheckOnClick = true;
             this.MenuMain_ColumnFilter_Category.Name = "MenuMain_ColumnFilter_Category";
             this.MenuMain_ColumnFilter_Category.Size = new System.Drawing.Size(140, 22);
-			this.MenuMain_ColumnFilter_Category.Text = GeneralRes.CategoryFilter;
-			this.MenuMain_ColumnFilter_Category.Click += new System.EventHandler(this.MenuMain_ColumnFilter_Click);
+            this.MenuMain_ColumnFilter_Category.Text = global::ElectronicObserver.Window.GeneralRes.CategoryFilter;
+            this.MenuMain_ColumnFilter_Category.Click += new System.EventHandler(this.MenuMain_ColumnFilter_Click);
             // 
             // MenuMain_ColumnFilter_Name
             // 
             this.MenuMain_ColumnFilter_Name.CheckOnClick = true;
             this.MenuMain_ColumnFilter_Name.Name = "MenuMain_ColumnFilter_Name";
             this.MenuMain_ColumnFilter_Name.Size = new System.Drawing.Size(140, 22);
-			this.MenuMain_ColumnFilter_Name.Text = GeneralRes.NameFilter;
-			this.MenuMain_ColumnFilter_Name.Click += new System.EventHandler(this.MenuMain_ColumnFilter_Click);
+            this.MenuMain_ColumnFilter_Name.Text = global::ElectronicObserver.Window.GeneralRes.NameFilter;
+            this.MenuMain_ColumnFilter_Name.Click += new System.EventHandler(this.MenuMain_ColumnFilter_Click);
             // 
             // MenuMain_ColumnFilter_Progress
             // 
@@ -360,6 +362,13 @@
             this.ManuMain_QuestDescription.Text = "Copy &description to clipboard";
             this.ManuMain_QuestDescription.Click += new System.EventHandler(this.ManuMain_QuestDescription_Click);
             // 
+            // ManuMain_QuestTranslate
+            // 
+            this.ManuMain_QuestTranslate.Name = "ManuMain_QuestTranslate";
+            this.ManuMain_QuestTranslate.Size = new System.Drawing.Size(287, 22);
+            this.ManuMain_QuestTranslate.Text = "Copy &non-translated quests to clipboard";
+            this.ManuMain_QuestTranslate.Click += new System.EventHandler(this.ManuMain_QuestTranslate_Click);
+            // 
             // MenuMain_GoogleQuest
             // 
             this.MenuMain_GoogleQuest.Name = "MenuMain_GoogleQuest";
@@ -376,8 +385,8 @@
             // 
             this.MenuMain_Initialize.Name = "MenuMain_Initialize";
             this.MenuMain_Initialize.Size = new System.Drawing.Size(287, 22);
-			this.MenuMain_Initialize.Text = GeneralRes.Initialize;
-			this.MenuMain_Initialize.Click += new System.EventHandler(this.MenuMain_Initialize_Click);
+            this.MenuMain_Initialize.Text = global::ElectronicObserver.Window.GeneralRes.Initialize;
+            this.MenuMain_Initialize.Click += new System.EventHandler(this.MenuMain_Initialize_Click);
             // 
             // ToolTipInfo
             // 
@@ -386,12 +395,12 @@
             this.ToolTipInfo.ReshowDelay = 100;
             this.ToolTipInfo.ShowAlways = true;
             // 
-            // ManuMain_QuestTranslate
+            // ManuMain_QuestCopy
             // 
-            this.ManuMain_QuestTranslate.Name = "ManuMain_QuestTranslate";
-            this.ManuMain_QuestTranslate.Size = new System.Drawing.Size(287, 22);
-            this.ManuMain_QuestTranslate.Text = "Copy &non-translated quests to clipboard";
-            this.ManuMain_QuestTranslate.Click += new System.EventHandler(this.ManuMain_QuestTranslate_Click);
+            this.ManuMain_QuestCopy.Name = "ManuMain_QuestCopy";
+            this.ManuMain_QuestCopy.Size = new System.Drawing.Size(287, 22);
+            this.ManuMain_QuestCopy.Text = "Copy &all quests";
+            this.ManuMain_QuestCopy.Click += new System.EventHandler(this.ManuMain_QuestCopy_Click);
             // 
             // FormQuest
             // 
@@ -404,8 +413,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.HideOnClose = true;
             this.Name = "FormQuest";
-			this.Text = GeneralRes.Quest;
-			this.Load += new System.EventHandler(this.FormQuest_Load);
+            this.Text = "任務";
+            this.Load += new System.EventHandler(this.FormQuest_Load);
             ((System.ComponentModel.ISupportInitialize)(this.QuestView)).EndInit();
             this.MenuProgress.ResumeLayout(false);
             this.MenuMain.ResumeLayout(false);
@@ -449,5 +458,6 @@
 		private System.Windows.Forms.ToolStripMenuItem ManuMain_QuestDescription;
 		private System.Windows.Forms.ToolStripMenuItem ManuMain_QuestTitle;
 		private System.Windows.Forms.ToolStripMenuItem ManuMain_QuestTranslate;
+		private System.Windows.Forms.ToolStripMenuItem ManuMain_QuestCopy;
 	}
 }

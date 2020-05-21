@@ -35,6 +35,10 @@ namespace ElectronicObserver.Observer.kcsapi.api_get_member
 				}
 			}
 
+			if (KCDatabase.Instance.Sortie != null)
+			{
+				KCDatabase.Instance.Sortie.UpdateUsedRessources();
+			}
 
 			db.Fleet.LoadFromResponse(APIName, data);
 

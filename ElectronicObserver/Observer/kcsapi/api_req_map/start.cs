@@ -19,7 +19,17 @@ namespace ElectronicObserver.Observer.kcsapi.api_req_map
 
             db.Battle.LoadFromResponse(APIName, data);
 
-            if (Utility.Configuration.Config.Control.EnableDiscordRPC)
+			KCDatabase.Instance.Sortie = new SortieData();
+			KCDatabase.Instance.Sortie.LoadFromResponse(APIName, data);
+			KCDatabase.Instance.SortieHistory.Add(KCDatabase.Instance.Sortie);
+
+			NodeData node = new NodeData();
+			node.LoadFromResponse(APIName, data);
+			KCDatabase.Instance.Sortie.Nodes.Add(node);
+
+			KCDatabase.Instance.Node = node;
+
+			if (Utility.Configuration.Config.Control.EnableDiscordRPC)
             {
                 DiscordFormat dataForWS = Instance.data;
                 dataForWS.top = string.Format("Node {0}-{1} {2}", db.Battle.Compass.MapAreaID, db.Battle.Compass.MapInfoID, db.Battle.Compass.DestinationID);

@@ -165,6 +165,43 @@ namespace ElectronicObserver.Utility
 		    return id;
         }
 
+		Dictionary<string, string> NodeData = new Dictionary<string, string>();
+
+		public string GetMapNodesOptimized(int worldId, int areaId, int nodeId)
+		{
+			var id = nodeId.ToString();
+			if (Configuration.Config.UI.UseOriginalNodeId)
+				return id;
+
+			if (NodeData.Count == 0) LoadNodesData();
+
+			string key = string.Concat(worldId.ToString("D2"), areaId.ToString())+$"N{nodeId}";
+
+			if (NodeData.ContainsKey(key)) return NodeData[key]; 
+			return id;
+		}
+
+		public void LoadNodesData()
+		{
+			var filepath = workingDirectory + @"\nodes.json";
+
+			using (var sr = new StreamReader(filepath))
+			{
+				var json = DynamicJson.Parse(sr.ReadToEnd());
+				foreach (KeyValuePair<string, object> world in json)
+				{
+					string worldKey = world.Key.Remove(0, 1).PadLeft(3, '0');
+					var nodes = DynamicJson.Parse(world.Value.ToString());
+
+					if (world.Key == "Revision") continue;
+					foreach (KeyValuePair<string, object> node in nodes)
+					{
+						NodeData.Add(worldKey+ node.Key, DynamicJson.Parse(node.Value.ToString())[1]);
+					}
+				}
+			}
+		}
+
 		private bool GetTranslation(string jpString, IEnumerable<XElement> translationList, string jpChildElement, string trChildElement, int id, ref string translate)
         {
             var foundTranslation = translationList.Where(el =>

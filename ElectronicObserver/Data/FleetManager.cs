@@ -66,7 +66,18 @@ namespace ElectronicObserver.Data
 
 		public FleetData this[int fleetID] => Fleets[fleetID];
 
+		public FleetManager Copy()
+		{
+			FleetManager copy = (FleetManager)this.MemberwiseClone();
 
+			copy.Fleets = new IDDictionary<FleetData>();
+			foreach (FleetData fleet in Fleets.Values)
+			{
+				copy.Fleets.Add(fleet.Copy());
+			}
+
+			return copy;
+		}
 
 		public override void LoadFromResponse(string apiname, dynamic data)
 		{

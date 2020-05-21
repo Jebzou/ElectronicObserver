@@ -212,6 +212,10 @@ namespace ElectronicObserver.Window
 				row.Height = 21;
 			}
 
+			ManuMain_QuestDescription.Visible = c.Debug.EnableDebugMenu;
+			ManuMain_QuestTitle.Visible = c.Debug.EnableDebugMenu;
+			ManuMain_QuestTranslate.Visible = c.Debug.EnableDebugMenu;
+
 			Updated();
 
 		}
@@ -784,11 +788,30 @@ namespace ElectronicObserver.Window
 			{
 				if (!quest.Translated)
 				{
-					output += $"<ID>{quest.QuestID}</ID>\r\n<JP-Name>{quest.Name}</JP-Name>\r\n<JP-Detail>{quest.Description}</JP-Detail>\r\n\r\n";
+					output += $"  <Quest>\r\n";
+					output += $"    <ID>{quest.QuestID}</ID>\r\n";
+					output += $"    <JP-Name>{quest.Name}</JP-Name>\r\n";
+					output += $"    <TR-Name>{(string)quest.RawData.api_title}</TR-Name>\r\n";
+					output += $"    <JP-Detail>{(string)quest.RawData.api_detail}</JP-Detail>\r\n";
+					output += $"    <TR-Detail>{quest.Description}</TR-Detail>\r\n";
+					output += $"  </Quest>\r\n";
 				}
 			}
 
-			Clipboard.SetText(output);
+			if (!string.IsNullOrEmpty(output))
+				Clipboard.SetText(output);
+		}
+
+		private void ManuMain_QuestCopy_Click(object sender, EventArgs e)
+		{
+			string output = "";
+			foreach (QuestData quest in KCDatabase.Instance.Quest.Quests.Values)
+			{
+				output += $"{quest.Name}: {quest.Description}\r\n \r\n";
+			}
+
+			if (!string.IsNullOrEmpty(output))
+				Clipboard.SetText(output);
 		}
 
 		protected override string GetPersistString()

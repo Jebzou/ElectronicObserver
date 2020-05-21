@@ -38,7 +38,11 @@ namespace ElectronicObserver.Data
 		/// </summary>
 		public ReadOnlyCollection<int> EquipmentType => Array.AsReadOnly((int[])RawData.api_type);
 
-
+		/// <summary>
+		/// True if equipment is translated
+		/// </summary>
+		public bool Translated => (string)RawData.api_name != Name;
+		
 
 		#region Parameters
 

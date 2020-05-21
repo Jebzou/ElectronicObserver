@@ -165,6 +165,12 @@ namespace ElectronicObserver.Data
 		/// </summary>
 		public KCServer Server { get; set; }
 
+		public SortieData Sortie { get; set; }
+
+		public NodeData Node { get; set; }
+
+		public List<SortieData> SortieHistory { get; set; }
+
 		private KCDatabase()
 		{
 
@@ -192,7 +198,9 @@ namespace ElectronicObserver.Data
 			ShipGroup = new ShipGroupManager();
 			BaseAirCorps = new IDDictionary<BaseAirCorpsData>();
 			RelocatedEquipments = new IDDictionary<RelocationData>();
-        }
+			Node = new NodeData();
+			SortieHistory = new List<SortieData>();
+		}
 
 
 		public void Load()

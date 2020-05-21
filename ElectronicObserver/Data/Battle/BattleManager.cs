@@ -322,6 +322,7 @@ namespace ElectronicObserver.Data.Battle
 				case "api_req_practice/battle_result":
 					Result = new BattleResultData();
 					Result.LoadFromResponse(apiname, data);
+					KCDatabase.Instance.Node.BattleResult = Result;
 					BattleFinished();
 					break;
 

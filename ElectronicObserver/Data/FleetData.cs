@@ -563,6 +563,13 @@ namespace ElectronicObserver.Data
 			}
 		}
 
+		public FleetData Copy()
+		{
+			FleetData copy = (FleetData)this.MemberwiseClone();
+			
+			return copy;
+		}
+
 
 		public override string ToString() => $"[{FleetID}] {Name}";
 

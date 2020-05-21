@@ -58,6 +58,11 @@ namespace ElectronicObserver.Observer.kcsapi.api_req_hokyu
 				Utility.Logger.Add(2, sb.ToString());
 			}
 
+			if (KCDatabase.Instance.Sortie != null)
+			{
+				KCDatabase.Instance.Sortie.UpdateUsedRessources();
+			}
+
 
 			base.OnResponseReceived((object)data);
 		}
