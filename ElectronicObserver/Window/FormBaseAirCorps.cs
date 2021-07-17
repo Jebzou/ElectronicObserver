@@ -153,7 +153,7 @@ namespace ElectronicObserver.Window
 
 					string areaName = KCDatabase.Instance.MapArea.ContainsKey( corps.MapAreaID ) ? KCDatabase.Instance.MapArea[corps.MapAreaID].NameEN : "Unknown Area";
 
-					sb.AppendLine( "Area: " + areaName );
+					sb.AppendLine(Properties.Window.FormBaseAirCorps.Area + areaName );
 
 					// state
 
@@ -183,7 +183,7 @@ namespace ElectronicObserver.Window
 						// 未補給
 						Name.ImageAlign = ContentAlignment.MiddleRight;
 						Name.ImageIndex = (int)ResourceManager.IconContent.FleetNotReplenished;
-						sb.AppendLine("未補給");
+						sb.AppendLine(Properties.Window.FormBaseAirCorps.Unsupplied);
 
 					}
 					else
@@ -193,7 +193,7 @@ namespace ElectronicObserver.Window
 
 					}
 					
-					sb.AppendLine(string.Format("合計制空: 防空 {0} / 対高高度 {1}",
+					sb.AppendLine(string.Format(Properties.Window.FormBaseAirCorps.AirControlSummary,
 						db.BaseAirCorps.Values.Where(c => c.MapAreaID == corps.MapAreaID && c.ActionKind == 2).Select(c => Calculator.GetAirSuperiority(c)).DefaultIfEmpty(0).Sum(),
 						db.BaseAirCorps.Values.Where(c => c.MapAreaID == corps.MapAreaID && c.ActionKind == 2).Select(c => Calculator.GetAirSuperiority(c, isHighAltitude: true)).DefaultIfEmpty(0).Sum()
 						));
@@ -248,7 +248,7 @@ namespace ElectronicObserver.Window
 
 					Squadrons.SetSlotList(corps);
 					ToolTipInfo.SetToolTip(Squadrons, GetEquipmentString(corps));
-                    ToolTipInfo.SetToolTip(Distance, string.Format("Total Distance: {0}", corps.Distance));
+                    ToolTipInfo.SetToolTip(Distance, string.Format(Properties.Window.FormBaseAirCorps.TotalDistance, corps.Distance));
 
 				}
 
@@ -301,7 +301,7 @@ namespace ElectronicObserver.Window
 					{
 						case 0:     // 未配属
 						default:
-							sb.AppendLine( "(empty)" );
+							sb.AppendLine(Properties.Window.FormBaseAirCorps.Empty);
 							break;
 
 						case 1:     // 配属済み
@@ -320,15 +320,15 @@ namespace ElectronicObserver.Window
 									sb.Append("[" + GeneralRes.Tired + "] ");
 									break;
 								case 3:
-									sb.Append( "[" + GeneralRes.VeryTired + "] " );
+									sb.Append("[" + GeneralRes.VeryTired + "] ");
 									break;
 							}
 
-							sb.AppendFormat( "{0} (Range: {1})\r\n", eq.NameWithLevel, eq.MasterEquipment.AircraftDistance );
+							sb.AppendFormat($"{Properties.Window.FormBaseAirCorps.Range}\n", eq.NameWithLevel, eq.MasterEquipment.AircraftDistance);
 							break;
 
 						case 2:		// 配置転換中
-							sb.AppendFormat( GeneralRes.BaseRelocate,
+							sb.AppendFormat($"{GeneralRes.BaseRelocate}\n",
 								DateTimeHelper.TimeToCSVString( squadron.RelocatedTime ) );
 							break;
 					}
@@ -366,6 +366,17 @@ namespace ElectronicObserver.Window
 			ConfigurationChanged();
 
 			Icon = ResourceManager.ImageToIcon(ResourceManager.Instance.Icons.Images[(int)ResourceManager.IconContent.FormBaseAirCorps]);
+
+			Translate();
+		}
+
+		public void Translate()
+		{
+			ContextMenuBaseAirCorps_CopyOrganization.Text = Properties.Window.FormBaseAirCorps.CopyOrganization;
+			// GeneralRes.ContextMenuBaseAirCorps_DisplayRelocatedEquipments <-- dupe
+			ContextMenuBaseAirCorps_DisplayRelocatedEquipments.Text = Properties.Window.FormBaseAirCorps.DisplayRelocatedEquipments;
+
+			Text = Properties.Window.FormBaseAirCorps.Title;
 		}
 
 		private void FormBaseAirCorps_Load(object sender, EventArgs e)
@@ -490,13 +501,13 @@ namespace ElectronicObserver.Window
 			foreach (var corps in baseaircorps)
 			{
 
-				string areaName = KCDatabase.Instance.MapArea.ContainsKey( corps.MapAreaID ) ? KCDatabase.Instance.MapArea[corps.MapAreaID].NameEN : "Unknown Area";
+				string areaName = KCDatabase.Instance.MapArea.ContainsKey(corps.MapAreaID) ? KCDatabase.Instance.MapArea[corps.MapAreaID].NameEN : Properties.Window.FormBaseAirCorps.UnknownArea;
 
-				sb.AppendFormat( "{0}\t[{1}] Fighter Power {2}/Range {3}\r\n",
-					( areaid == -1 ? ( areaName + "：" ) : "" ) + corps.Name,
-					Constants.GetBaseAirCorpsActionKind( corps.ActionKind ),
-					Calculator.GetAirSuperiority( corps ),
-					corps.Distance );
+				sb.AppendFormat($"{Properties.Window.FormBaseAirCorps.CopyOrganizationFormat}\n",
+					(areaid == -1 ? (areaName + "：") : "") + corps.Name,
+					Constants.GetBaseAirCorpsActionKind(corps.ActionKind),
+					Calculator.GetAirSuperiority(corps),
+					corps.Distance);
 
 				var sq = corps.Squadrons.Values.ToArray();
 
@@ -505,28 +516,29 @@ namespace ElectronicObserver.Window
 					if (i > 0)
 						sb.Append(", ");
 
-					if ( sq[i] == null ) {
-						sb.Append( GeneralRes.BaseUnknown );
+					if (sq[i] == null) 
+					{
+						sb.Append(GeneralRes.BaseUnknown);
 						continue;
 					}
 
 					switch (sq[i].State)
 					{
 						case 0:
-							sb.Append( GeneralRes.BaseUnassigned );
+							sb.Append(GeneralRes.BaseUnassigned);
 							break;
 						case 1:
 							{
 								var eq = sq[i].EquipmentInstance;
 
-								sb.Append(eq?.NameWithLevel ?? "(empty)");
+								sb.Append(eq?.NameWithLevel ?? Properties.Window.FormBaseAirCorps.Empty);
 
 								if (sq[i].AircraftCurrent < sq[i].AircraftMax)
 									sb.AppendFormat("[{0}/{1}]", sq[i].AircraftCurrent, sq[i].AircraftMax);
 							}
 							break;
 						case 2:
-							sb.Append( "(" + GeneralRes.BaseRedeployment + ")" );
+							sb.Append("(" + GeneralRes.BaseRedeployment + ")");
 							break;
 					}
 				}
@@ -544,10 +556,10 @@ namespace ElectronicObserver.Window
 				.Where(eq => eq.EquipmentInstance != null)
 				.Select(eq => string.Format("{0} ({1}～)", eq.EquipmentInstance.NameWithLevel, DateTimeHelper.TimeToCSVString(eq.RelocatedTime))));
 
-			if ( message.Length == 0 )
+			if (message.Length == 0)
 				message = GeneralRes.ContextMenuBaseAirCorps_DisplayRelocatedEquipments_Detail;
 
-			MessageBox.Show( message, GeneralRes.ContextMenuBaseAirCorps_DisplayRelocatedEquipments_Title, MessageBoxButtons.OK, MessageBoxIcon.Information );
+			MessageBox.Show(message, GeneralRes.ContextMenuBaseAirCorps_DisplayRelocatedEquipments_Title, MessageBoxButtons.OK, MessageBoxIcon.Information);
 		}
 
 

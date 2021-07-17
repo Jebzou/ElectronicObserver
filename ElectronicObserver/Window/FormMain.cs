@@ -102,6 +102,93 @@ namespace ElectronicObserver.Window
 			InitializeComponent();
 
 			this.Text = SoftwareInformation.SoftwareNameEnglish;
+
+			Translate();
+		}
+
+		private void Translate()
+		{
+			StripMenu_File.Text = Properties.Window.FormMain.File;
+
+			StripMenu_File_Record.Text = Properties.Window.FormMain.File_Record;
+			StripMenu_File_Record_Save.Text = Properties.Window.FormMain.File_Record_Save;
+			StripMenu_File_Record_Load.Text = Properties.Window.FormMain.File_Record_Load;
+
+			StripMenu_File_Layout.Text = Properties.Window.FormMain.File_Layout;
+			StripMenu_File_Layout_Load.Text = Properties.Window.FormMain.File_Layout_Load;
+			StripMenu_File_Layout_Save.Text = Properties.Window.FormMain.File_Layout_Save;
+			StripMenu_File_Layout_Open.Text = Properties.Window.FormMain.File_Layout_Open;
+			StripMenu_File_Layout_Change.Text = Properties.Window.FormMain.File_Layout_Change;
+			StripMenu_File_Layout_LockLayout.Text = Properties.Window.FormMain.File_Layout_LockLayout;
+			StripMenu_File_Layout_TopMost.Text = Properties.Window.FormMain.File_Layout_TopMost;
+
+			StripMenu_File_Notification.Text = Properties.Window.FormMain.File_Notification;
+			StripMenu_File_Notification_MuteAll.Text = Properties.Window.FormMain.File_Notification_MuteAll;
+
+			StripMenu_File_Configuration.Text = Properties.Window.FormMain.File_Configuration;
+			StripMenu_File_Close.Text = Properties.Window.FormMain.File_Close;
+
+			StripMenu_View.Text = Properties.Window.FormMain.View;
+			StripMenu_View_Fleet.Text = Properties.Window.FormMain.View_Fleet;
+			StripMenu_View_Fleet_1.Text = Properties.Window.FormMain.View_Fleet_1;
+			StripMenu_View_Fleet_2.Text = Properties.Window.FormMain.View_Fleet_2;
+			StripMenu_View_Fleet_3.Text = Properties.Window.FormMain.View_Fleet_3;
+			StripMenu_View_Fleet_4.Text = Properties.Window.FormMain.View_Fleet_4;
+			StripMenu_View_FleetOverview.Text = Properties.Window.FormMain.View_FleetOverview;
+			StripMenu_View_ShipGroup.Text = Properties.Window.FormMain.View_ShipGroup;
+			StripMenu_View_Dock.Text = Properties.Window.FormMain.View_Dock;
+			StripMenu_View_Arsenal.Text = Properties.Window.FormMain.View_Arsenal;
+			StripMenu_View_BaseAirCorps.Text = Properties.Window.FormMain.View_BaseAirCorps;
+			StripMenu_View_Headquarters.Text = Properties.Window.FormMain.View_Headquarters;
+			StripMenu_View_Quest.Text = Properties.Window.FormMain.View_Quest;
+			StripMenu_View_Information.Text = Properties.Window.FormMain.View_Information;
+			StripMenu_View_Compass.Text = Properties.Window.FormMain.View_Compass;
+			StripMenu_View_Battle.Text = Properties.Window.FormMain.View_Battle;
+			StripMenu_View_Browser.Text = Properties.Window.FormMain.View_Browser;
+			StripMenu_View_Log.Text = Properties.Window.FormMain.View_Log;
+			StripMenu_View_Json.Text = Properties.Window.FormMain.View_Json;
+			StripMenu_View_FleetPreset.Text = Properties.Window.FormMain.View_FleetPreset;
+
+			StripMenu_WindowCapture.Text = Properties.Window.FormMain.WindowCapture;
+			StripMenu_WindowCapture_SubWindow.Text = Properties.Window.FormMain.WindowCapture_SubWindow;
+			StripMenu_WindowCapture_AttachAll.Text = Properties.Window.FormMain.WindowCapture_AttachAll;
+			StripMenu_WindowCapture_DetachAll.Text = Properties.Window.FormMain.WindowCapture_DetachAll;
+
+			StripMenu_Tool.Text = Properties.Window.FormMain.Tool;
+			StripMenu_Tool_EquipmentList.Text = Properties.Window.FormMain.Tool_EquipmentList;
+			StripMenu_Tool_DropRecord.Text = Properties.Window.FormMain.Tool_DropRecord;
+			StripMenu_Tool_DevelopmentRecord.Text = Properties.Window.FormMain.Tool_DevelopmentRecord;
+			StripMenu_Tool_ConstructionRecord.Text = Properties.Window.FormMain.Tool_ConstructionRecord;
+			StripMenu_Tool_ResourceChart.Text = Properties.Window.FormMain.Tool_ResourceChart;
+			StripMenu_Tool_AlbumMasterShip.Text = Properties.Window.FormMain.Tool_AlbumMasterShip;
+			StripMenu_Tool_AlbumMasterEquipment.Text = Properties.Window.FormMain.Tool_AlbumMasterEquipment;
+			StripMenu_Tool_AntiAirDefense.Text = Properties.Window.FormMain.Tool_AntiAirDefense;
+			StripMenu_Tool_FleetImageGenerator.Text = Properties.Window.FormMain.Tool_FleetImageGenerator;
+			StripMenu_Tool_BaseAirCorpsSimulation.Text = Properties.Window.FormMain.Tool_BaseAirCorpsSimulation;
+			StripMenu_Tool_ExpChecker.Text = Properties.Window.FormMain.Tool_ExpChecker;
+			StripMenu_Tool_ExpeditionCheck.Text = Properties.Window.FormMain.Tool_ExpeditionCheck;
+			StripMenu_Tool_KancolleProgress.Text = Properties.Window.FormMain.Tool_KancolleProgress;
+			StripMenu_Tool_ExtraBrowser.Text = Properties.Window.FormMain.Tool_ExtraBrowser;
+
+			StripMenu_Debug.Text = Properties.Window.FormMain.Debug;
+			StripMenu_Debug_LoadAPIFromFile.Text = Properties.Window.FormMain.Debug_LoadAPIFromFile;
+			StripMenu_Debug_LoadInitialAPI.Text = Properties.Window.FormMain.Debug_LoadInitialAPI;
+			StripMenu_Debug_LoadRecordFromOld.Text = Properties.Window.FormMain.Debug_LoadRecordFromOld;
+			StripMenu_Debug_DeleteOldAPI.Text = Properties.Window.FormMain.Debug_DeleteOldAPI;
+			StripMenu_Debug_RenameShipResource.Text = Properties.Window.FormMain.Debug_RenameShipResource;
+			StripMenu_Debug_LoadDataFromOld.Text = Properties.Window.FormMain.Debug_LoadDataFromOld;
+
+			StripMenu_Help.Text = Properties.Window.FormMain.Help;
+			StripMenu_Help_Help.Text = Properties.Window.FormMain.Help_Help;
+			StripMenu_Help_Issue.Text = Properties.Window.FormMain.Help_Issue;
+			StripMenu_Help_Discord.Text = Properties.Window.FormMain.Help_Discord;
+			StripMenu_Help_Update.Text = Properties.Window.FormMain.Help_Update;
+			StripMenu_Help_Version.Text = Properties.Window.FormMain.Help_Version;
+
+			StripStatus_Information.Text = Properties.Window.FormMain.Information;
+			StripStatus_Clock.Text = Properties.Window.FormMain.Clock;
+
+			Text = Properties.Window.FormMain.Title;
 		}
 
 		private async void FormMain_Load(object sender, EventArgs e)
@@ -136,7 +223,13 @@ namespace ElectronicObserver.Window
 			});
 			Utility.Configuration.Instance.ConfigurationChanged += ConfigurationChanged;
 
-			Utility.Logger.Add(2, SoftwareInformation.SoftwareNameEnglish + " is starting...");
+			string softwareName = CultureInfo.CurrentCulture.Name switch
+			{
+				"en-US" => SoftwareInformation.SoftwareNameEnglish,
+				_ => SoftwareInformation.SoftwareNameJapanese
+			};
+
+			Utility.Logger.Add(2, softwareName + Properties.Window.FormMain.Starting);
 
 
 			ResourceManager.Instance.Load();
@@ -275,8 +368,6 @@ namespace ElectronicObserver.Window
 
 			UIUpdateTimer.Start();
 
-			StripMenu_Wpf.Visible = false;
-
 			Utility.Logger.Add(3, Resources.StartupComplete);
 		}
 
@@ -363,7 +454,7 @@ namespace ElectronicObserver.Window
 		public void Update_Available(string newVersion)
 		{
 			StripMenu_Update.Visible = true;
-			StripMenu_Update.Text = string.Format("Electronic Observer v{0} is available!", newVersion);
+			StripMenu_Update.Text = string.Format(Properties.Window.FormMain.UpdateAvailable, newVersion);
 		}
 
 
@@ -426,6 +517,7 @@ namespace ElectronicObserver.Window
 						maintTimer = maintDate - now;
 					}
 
+					// todo: this feature isn't really used so I won't localize it for now
 					string message = eventState switch
 					{
 						MaintenanceState.EventStart => maintDate > now ? "Event starts in" : "Event has started!",
@@ -519,10 +611,15 @@ namespace ElectronicObserver.Window
 
         private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
 		{
+			string name = CultureInfo.CurrentCulture.Name switch
+			{
+				"en-US" => SoftwareInformation.SoftwareNameEnglish,
+				_ => SoftwareInformation.SoftwareNameJapanese
+			};
 
 			if ( Utility.Configuration.Config.Life.ConfirmOnClosing )
             {
-				if ( MessageBox.Show( "Are you sure you want to exit?", "Electronic Observer", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2 )
+				if ( MessageBox.Show(string.Format(Properties.Window.FormMain.ExitConfirmation, name), Properties.Window.FormMain.ConfirmatonCaption, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2 )
 					== System.Windows.Forms.DialogResult.No )
                 {
 					e.Cancel = true;
@@ -531,7 +628,7 @@ namespace ElectronicObserver.Window
 			}
 
 
-			Utility.Logger.Add( 2, SoftwareInformation.SoftwareNameEnglish + Resources.IsClosing );
+			Utility.Logger.Add( 2, name + Resources.IsClosing );
 
 			UIUpdateTimer.Stop();
 
@@ -721,7 +818,7 @@ namespace ElectronicObserver.Window
 					LoadSubWindowsLayout(archive.GetEntry("SubWindowLayout.xml").Open());
 				}
 
-				Utility.Logger.Add(1, "Successfully loaded window layout from " + path);
+				Utility.Logger.Add(1, string.Format(Properties.Window.FormMain.LayoutLoaded, path));
 
 			}
 			catch (FileNotFoundException)
@@ -856,7 +953,7 @@ namespace ElectronicObserver.Window
 		private void StripMenu_File_SaveData_Load_Click(object sender, EventArgs e)
 		{
 
-			if ( MessageBox.Show( Resources.AskLoad, "Confirmation",
+			if ( MessageBox.Show( Resources.AskLoad, Properties.Window.FormMain.ConfirmatonCaption,
 					MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2 )
 				== System.Windows.Forms.DialogResult.Yes )
             {
@@ -1095,7 +1192,7 @@ namespace ElectronicObserver.Window
 
 			if (KCDatabase.Instance.MasterShips.Count == 0)
 			{
-				MessageBox.Show("Ship data is not loaded.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show(Properties.Window.FormMain.ShipDataNotLoaded, Properties.Window.FormMain.ErrorCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
 			}
 			else
@@ -1112,7 +1209,7 @@ namespace ElectronicObserver.Window
 
 			if (KCDatabase.Instance.MasterEquipments.Count == 0)
 			{
-				MessageBox.Show("Equipment data is not loaded.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show(Properties.Window.FormMain.EquipmentDataNotLoaded, Properties.Window.FormMain.ErrorCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
 
 			}
 			else
@@ -1333,13 +1430,17 @@ namespace ElectronicObserver.Window
 		private void StripMenu_Help_Help_Click(object sender, EventArgs e)
 		{
 
-			if (MessageBox.Show("This will open the EO wiki with your browser.\r\nAre you sure?", "Help",
+			if (MessageBox.Show(Properties.Window.FormMain.OpenEOWiki, Properties.Window.FormMain.HelpCaption,
 				MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1)
 				== System.Windows.Forms.DialogResult.Yes)
 			{
 				ProcessStartInfo psi = new ProcessStartInfo
 				{
-					FileName = "https://github.com/silfumus/ElectronicObserver/wiki",
+					FileName = CultureInfo.CurrentCulture.Name switch
+					{
+						"en-US" => "https://github.com/silfumus/ElectronicObserver/wiki",
+						_ => "https://github.com/andanteyk/ElectronicObserver/wiki"
+					},
 					UseShellExecute = true
 				};
 				Process.Start(psi);
@@ -1350,7 +1451,7 @@ namespace ElectronicObserver.Window
 		private void StripMenu_Help_Issue_Click(object sender, EventArgs e)
 		{
 
-			if (MessageBox.Show("This will open a page with your browser.\r\nAre you sure?", "Report A Problem",
+			if (MessageBox.Show(Properties.Window.FormMain.ReportIssue, Properties.Window.FormMain.ReportIssue,
 				MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button1)
 				== System.Windows.Forms.DialogResult.Yes)
 			{
@@ -1378,7 +1479,7 @@ namespace ElectronicObserver.Window
 			}
 			catch (Exception ex)
 			{
-				Utility.ErrorReporter.SendErrorReport(ex, "Failed to search on Google.");
+				Utility.ErrorReporter.SendErrorReport(ex, Properties.Window.FormMain.FailedToOpenBrowser);
 			}
 
 		}
@@ -1417,7 +1518,7 @@ namespace ElectronicObserver.Window
 			{
 
 				dialog.Filter = "Layout Archive|*.zip|File|*";
-				dialog.Title = "Open Layout File";
+				dialog.Title = Properties.Window.FormMain.OpenLayoutCaption;
 
 
 				PathHelper.InitOpenFileDialog(Utility.Configuration.Config.Life.LayoutFilePath, dialog);
@@ -1441,7 +1542,7 @@ namespace ElectronicObserver.Window
 			{
 
 				dialog.Filter = "Layout Archive|*.zip|File|*";
-				dialog.Title = "Save Layout As";
+				dialog.Title = Properties.Window.FormMain.SaveLayoutCaption;
 
 
 				PathHelper.InitSaveFileDialog(Utility.Configuration.Config.Life.LayoutFilePath, dialog);
@@ -1478,7 +1579,7 @@ namespace ElectronicObserver.Window
 
 			if (RecordManager.Instance.ShipDrop.Record.Count == 0)
 			{
-				MessageBox.Show(GeneralRes.NoDevData, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show(GeneralRes.NoDevData, Properties.Window.FormMain.ErrorCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
 			}
 
@@ -1498,7 +1599,7 @@ namespace ElectronicObserver.Window
 
 			if (RecordManager.Instance.Development.Record.Count == 0)
 			{
-				MessageBox.Show(GeneralRes.NoDevData, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show(GeneralRes.NoDevData, Properties.Window.FormMain.ErrorCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
 			}
 
@@ -1517,7 +1618,7 @@ namespace ElectronicObserver.Window
 
 			if (RecordManager.Instance.Construction.Record.Count == 0)
 			{
-				MessageBox.Show(GeneralRes.NoBuildData, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+				MessageBox.Show(GeneralRes.NoBuildData, Properties.Window.FormMain.ErrorCaption, MessageBoxButtons.OK, MessageBoxIcon.Error);
 				return;
 			}
 
@@ -1738,26 +1839,36 @@ namespace ElectronicObserver.Window
 			ShowForm(fFleetPreset);
 		}
 
+		private void SwitchLanguageToolStripMenuItem_Click(object sender, EventArgs e)
+		{
+			CultureInfo c = CultureInfo.CurrentCulture;
+
+			CultureInfo newCultureInfo = new(c.Name switch
+			{
+				"en-US" => "ja-JP",
+				_ => "en-US"
+			});
+
+			Thread.CurrentThread.CurrentCulture = newCultureInfo;
+			Thread.CurrentThread.CurrentUICulture = newCultureInfo;
+
+			Translate();
+			fArsenal.Translate();
+			fBaseAirCorps.Translate();
+			fBattle.Translate();
+			fBrowser.Translate();
+			fCompass.Translate();
+			fDock.Translate();
+			foreach(var fleet in fFleet) fleet.Translate();
+			fFleetOverview.Translate();
+			fFleetPreset.Translate();
+			fHeadquarters.Translate();
+			fInformation.Translate();
+			fLog.Translate();
+			fQuest.Translate();
+			fShipGroup.Translate();
+		}
+
 		#endregion
-
-		private void StripMenu_Wpf_Fleet_1_Click(object sender, EventArgs e)
-		{
-			ShowForm(FormFleetWpf[0]);
-		}
-
-		private void StripMenu_Wpf_Fleet_2_Click(object sender, EventArgs e)
-		{
-			ShowForm(FormFleetWpf[1]);
-		}
-
-		private void StripMenu_Wpf_Fleet_3_Click(object sender, EventArgs e)
-		{
-			ShowForm(FormFleetWpf[2]);
-		}
-
-		private void StripMenu_Wpf_Fleet_4_Click(object sender, EventArgs e)
-		{
-			ShowForm(FormFleetWpf[3]);
-		}
 	}
 }

@@ -161,7 +161,11 @@
     <value>工廠ドック #{0}で {1}の建造を開始しました。({2}/{3}/{4}/{5}-{6} 秘書艦: {7})</value>
   </data>
   <data name="ASTooltip" xml:space="preserve">
-    <value>確保: {0}\r\n優勢: {1}\r\n均衡: {2}\r\n劣勢: {3}\r\n({4}: {5})\r\n</value>
+    <value>確保: {0}
+優勢: {1}
+均衡: {2}
+劣勢: {3}
+({4}: {5})</value>
   </data>
   <data name="ASW" xml:space="preserve">
     <value>対潜</value>
@@ -427,9 +431,6 @@
   <data name="ShipName" xml:space="preserve">
     <value>艦名</value>
   </data>
-  <data name="ShipTooltip" xml:space="preserve">
-    <value>{0} {1}\n火力: {2}/{3}\n雷装: {4}/{5}\n対空: {6}/{7}\n装甲: {8}/{9}\n対潜: {10}/{11}\n回避: {12}/{13}\n索敵: {14}/{15}\n運: {16}\n射程: {17} / 速力: {18}\n(右クリックで図鑑)\n</value>
-  </data>
   <data name="ShipType" xml:space="preserve">
     <value>艦種</value>
   </data>
@@ -463,18 +464,6 @@
   <data name="Speed" xml:space="preserve">
     <value>速力</value>
   </data>
-  <data name="Stage2AATooltip" xml:space="preserve">
-    <value>第1次: -{0}/{1}\r\n第2次: -{2}/{3}\r\n</value>
-  </data>
-  <data name="Stage2ContactTooltip" xml:space="preserve">
-    <value>{0}触接中\r\n第1次: {1}\r\n第2次: {2}</value>
-  </data>
-  <data name="StageXAACI" xml:space="preserve">
-    <value>第{0}次: {1}\r\nカットイン種別: {2} ({3})\r\n</value>
-  </data>
-  <data name="StageXAACIFail" xml:space="preserve">
-    <value>第{0}次: (発動せず)\r\n</value>
-  </data>
   <data name="StarShellUsed" xml:space="preserve">
     <value>照明弾投射</value>
   </data>
@@ -497,7 +486,7 @@
     <value>大破まで: {0}</value>
   </data>
   <data name="ToMidAndHeavy" xml:space="preserve">
-    <value>中破まで: {0} / 大破まで: {1}\n</value>
+    <value>中破まで: {0} / 大破まで: {1}</value>
   </data>
   <data name="ToNextLevel" xml:space="preserve">
     <value>次のレベルまで: {0}</value>
@@ -636,7 +625,10 @@
     <value>[補給完了]</value>
   </data>
   <data name="ResupplyString" xml:space="preserve">
-    <value>燃料: {0:+0;-0} ( 自然 {1:+0;-0} - 補給 {2} - 入渠 {3} )\r\n弾薬: {4:+0;-0} ( 自然 {5:+0;-0} - 補給 {6} )\r\n鋼材: {7:+0;-0} ( 自然 {8:+0;-0} - 入渠 {9} )\r\nボーキ: {10:+0;-0} ( 自然 {11:+0;-0} - 補給 {12} ( {13} 機 ) )</value>
+    <value>燃料: {0:+0;-0} ( 自然 {1:+0;-0} - 補給 {2} - 入渠 {3} )
+弾薬: {4:+0;-0} ( 自然 {5:+0;-0} - 補給 {6} )
+鋼材: {7:+0;-0} ( 自然 {8:+0;-0} - 入渠 {9} )
+ボーキ: {10:+0;-0} ( 自然 {11:+0;-0} - 補給 {12} ( {13} 機 ) )</value>
   </data>
   <data name="Bombers" xml:space="preserve">
     <value>爆装</value>
@@ -705,16 +697,19 @@
     <value>その他の任務を表示(&amp;R)</value>
   </data>
   <data name="BaseNotOpen" xml:space="preserve">
-    <value>(未開放)\r\n</value>
+    <value>(未開放)</value>
   </data>
   <data name="BaseRedeployment" xml:space="preserve">
     <value>配置転換中</value>
   </data>
   <data name="BaseRelocate" xml:space="preserve">
-    <value>配置転換中 (開始時刻: {0})\r\n</value>
+    <value>配置転換中 (開始時刻: {0})</value>
   </data>
   <data name="BaseTooltip" xml:space="preserve">
-    <value>確保: {0}\r\n優勢: {1}\r\n均衡: {2}\r\n劣勢: {3}\r\n</value>
+    <value>確保: {0}
+優勢: {1}
+均衡: {2}
+劣勢: {3}</value>
   </data>
   <data name="BaseUnassigned" xml:space="preserve">
     <value>(未配属)</value>
@@ -801,7 +796,9 @@
     <value>配置転換中装備</value>
   </data>
   <data name="AntiAirPower" xml:space="preserve">
-    <value>艦隊防空\r\n単縦陣: {0:0.0} / 複縦陣: {1:0.0} / 輪形陣: {2:0.0}\r\n</value>
+    <value>艦隊防空
+単縦陣: {0:0.0} / 複縦陣: {1:0.0} / 輪形陣: {2:0.0}
+</value>
   </data>
   <data name="ShipAADefense" xml:space="preserve">
     <value>加重対空: {0} (割合撃墜: {1:p2})</value>

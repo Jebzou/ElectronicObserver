@@ -55,6 +55,11 @@
 		</Reference>
 	</ItemGroup>
 	<ItemGroup>
+		<Compile Update="Data\ConstantsRes.Designer.cs">
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		  <DependentUpon>ConstantsRes.resx</DependentUpon>
+		</Compile>
 		<Compile Update="Data\DataRes.Designer.cs">
 			<DesignTime>True</DesignTime>
 			<AutoGen>True</AutoGen>
@@ -70,10 +75,140 @@
 			<AutoGen>True</AutoGen>
 			<DependentUpon>ObserverRes.resx</DependentUpon>
 		</Compile>
+		<Compile Update="Properties\Window\Dialog\DialogAlbumMasterEquipment.Designer.cs">
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		  <DependentUpon>DialogAlbumMasterEquipment.resx</DependentUpon>
+		</Compile>
+		<Compile Update="Properties\Window\Dialog\DialogAlbumMasterShip.Designer.cs">
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		  <DependentUpon>DialogAlbumMasterShip.resx</DependentUpon>
+		</Compile>
+		<Compile Update="Properties\Window\Dialog\DialogAlbumShipParameter.Designer.cs">
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		  <DependentUpon>DialogAlbumShipParameter.resx</DependentUpon>
+		</Compile>
+		<Compile Update="Properties\Window\Dialog\DialogAntiAirDefense.Designer.cs">
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		  <DependentUpon>DialogAntiAirDefense.resx</DependentUpon>
+		</Compile>
+		<Compile Update="Properties\Window\Dialog\DialogBaseAirCorpsSimulation.Designer.cs">
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		  <DependentUpon>DialogBaseAirCorpsSimulation.resx</DependentUpon>
+		</Compile>
+		<Compile Update="Properties\Window\Dialog\DialogConfiguration.Designer.cs">
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		  <DependentUpon>DialogConfiguration.resx</DependentUpon>
+		</Compile>
+		<Compile Update="Properties\Window\Dialog\DialogConfigurationNotifier.Designer.cs">
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		  <DependentUpon>DialogConfigurationNotifier.resx</DependentUpon>
+		</Compile>
+		<Compile Update="Properties\Window\Dialog\DialogDevelopmentRecordViewer.Designer.cs">
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		  <DependentUpon>DialogDevelopmentRecordViewer.resx</DependentUpon>
+		</Compile>
+		<Compile Update="Properties\Window\Dialog\DialogDropRecordViewer.Designer.cs">
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		  <DependentUpon>DialogDropRecordViewer.resx</DependentUpon>
+		</Compile>
+		<Compile Update="Properties\Window\Dialog\DialogEquipmentList.Designer.cs">
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		  <DependentUpon>DialogEquipmentList.resx</DependentUpon>
+		</Compile>
+		<Compile Update="Properties\Window\Dialog\DialogExpChecker.Designer.cs">
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		  <DependentUpon>DialogExpChecker.resx</DependentUpon>
+		</Compile>
+		<Compile Update="Properties\Window\Dialog\DialogExpeditionCheck.Designer.cs">
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		  <DependentUpon>DialogExpeditionCheck.resx</DependentUpon>
+		</Compile>
+		<Compile Update="Properties\Window\Dialog\DialogFleetImageGenerator.Designer.cs">
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		  <DependentUpon>DialogFleetImageGenerator.resx</DependentUpon>
+		</Compile>
 		<Compile Update="Properties\Window\Dialog\DialogShipGroupFilter.Designer.cs">
 			<DesignTime>True</DesignTime>
 			<AutoGen>True</AutoGen>
 			<DependentUpon>DialogShipGroupFilter.resx</DependentUpon>
+		</Compile>
+		<Compile Update="Properties\Window\FormBaseAirCorps.Designer.cs">
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		  <DependentUpon>FormBaseAirCorps.resx</DependentUpon>
+		</Compile>
+		<Compile Update="Properties\Window\FormBattle.Designer.cs">
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		  <DependentUpon>FormBattle.resx</DependentUpon>
+		</Compile>
+		<Compile Update="Properties\Window\FormBrowserHost.Designer.cs">
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		  <DependentUpon>FormBrowserHost.resx</DependentUpon>
+		</Compile>
+		<Compile Update="Properties\Window\FormCompass.Designer.cs">
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		  <DependentUpon>FormCompass.resx</DependentUpon>
+		</Compile>
+		<Compile Update="Properties\Window\FormDock.Designer.cs">
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		  <DependentUpon>FormDock.resx</DependentUpon>
+		</Compile>
+		<Compile Update="Properties\Window\FormFleet.Designer.cs">
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		  <DependentUpon>FormFleet.resx</DependentUpon>
+		</Compile>
+		<Compile Update="Properties\Window\FormFleetOverview.Designer.cs">
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		  <DependentUpon>FormFleetOverview.resx</DependentUpon>
+		</Compile>
+		<Compile Update="Properties\Window\FormFleetPreset.Designer.cs">
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		  <DependentUpon>FormFleetPreset.resx</DependentUpon>
+		</Compile>
+		<Compile Update="Properties\Window\FormHeadQuarters.Designer.cs">
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		  <DependentUpon>FormHeadQuarters.resx</DependentUpon>
+		</Compile>
+		<Compile Update="Properties\Window\FormInformation.Designer.cs">
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		  <DependentUpon>FormInformation.resx</DependentUpon>
+		</Compile>
+		<Compile Update="Properties\Window\FormMain.Designer.cs">
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		  <DependentUpon>FormMain.resx</DependentUpon>
+		</Compile>
+		<Compile Update="Properties\Window\FormQuest.Designer.cs">
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		  <DependentUpon>FormQuest.resx</DependentUpon>
+		</Compile>
+		<Compile Update="Properties\Window\FormShipGroup.Designer.cs">
+		  <DesignTime>True</DesignTime>
+		  <AutoGen>True</AutoGen>
+		  <DependentUpon>FormShipGroup.resx</DependentUpon>
 		</Compile>
 		<Compile Update="Window\Control\FleetState.cs">
 			<SubType>UserControl</SubType>
@@ -166,11 +301,13 @@
 		<ProjectReference Include="..\KancolleProgress\KancolleProgress.csproj" />
 	</ItemGroup>
 	<ItemGroup>
-		<PackageReference Include="Dirkster.AvalonDock" Version="4.50.3" />
+		<PackageReference Include="Dirkster.AvalonDock" Version="4.51.1" />
+		<PackageReference Include="Microsoft.AppCenter.Analytics" Version="4.3.0" />
+		<PackageReference Include="Microsoft.AppCenter.Crashes" Version="4.3.0" />
 		<PackageReference Include="Microsoft.Toolkit.Mvvm" Version="7.0.2" />
 		<PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.31" />
 		<PackageReference Include="ModernWpfUI" Version="0.9.4" />
-		<PackageReference Include="PropertyChanged.Fody" Version="3.3.3" PrivateAssets="All" />
+		<PackageReference Include="PropertyChanged.Fody" Version="3.4.0" PrivateAssets="All" />
 		<PackageReference Include="DynaJson" Version="2.2.0" />
 		<PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
 		<PackageReference Include="Microsoft.VisualBasic" Version="10.3.0" />
@@ -180,9 +317,9 @@
 		<PackageReference Include="System.IO.FileSystem" Version="4.3.0" />
 		<PackageReference Include="System.Management" Version="5.0.0" />
 		<PackageReference Include="DiscordRichPresence" Version="1.0.175" />
-		<PackageReference Include="Grpc" Version="2.37.1" />
-		<PackageReference Include="Grpc.Core" Version="2.37.1" />
-		<PackageReference Include="Grpc.Core.Api" Version="2.37.1" />
+		<PackageReference Include="Grpc" Version="2.38.1" />
+		<PackageReference Include="Grpc.Core" Version="2.38.1" />
+		<PackageReference Include="Grpc.Core.Api" Version="2.38.1" />
 		<PackageReference Include="log4net" Version="2.0.12" />
 		<PackageReference Include="MagicOnion" Version="3.0.13" />
 		<PackageReference Include="MagicOnion.Abstractions" Version="3.0.13" />
@@ -240,6 +377,10 @@
 		</COMReference>
 	</ItemGroup>
 	<ItemGroup>
+		<EmbeddedResource Update="Data\ConstantsRes.resx">
+		  <Generator>PublicResXFileCodeGenerator</Generator>
+		  <LastGenOutput>ConstantsRes.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
 		<EmbeddedResource Update="Data\DataRes.resx">
 			<Generator>ResXFileCodeGenerator</Generator>
 			<LastGenOutput>DataRes.Designer.cs</LastGenOutput>
@@ -252,9 +393,113 @@
 			<Generator>ResXFileCodeGenerator</Generator>
 			<LastGenOutput>ObserverRes.Designer.cs</LastGenOutput>
 		</EmbeddedResource>
+		<EmbeddedResource Update="Properties\Window\Dialog\DialogAlbumMasterEquipment.resx">
+		  <Generator>PublicResXFileCodeGenerator</Generator>
+		  <LastGenOutput>DialogAlbumMasterEquipment.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Properties\Window\Dialog\DialogAlbumMasterShip.resx">
+		  <Generator>PublicResXFileCodeGenerator</Generator>
+		  <LastGenOutput>DialogAlbumMasterShip.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Properties\Window\Dialog\DialogAlbumShipParameter.resx">
+		  <Generator>PublicResXFileCodeGenerator</Generator>
+		  <LastGenOutput>DialogAlbumShipParameter.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Properties\Window\Dialog\DialogAntiAirDefense.resx">
+		  <Generator>PublicResXFileCodeGenerator</Generator>
+		  <LastGenOutput>DialogAntiAirDefense.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Properties\Window\Dialog\DialogBaseAirCorpsSimulation.resx">
+		  <Generator>PublicResXFileCodeGenerator</Generator>
+		  <LastGenOutput>DialogBaseAirCorpsSimulation.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Properties\Window\Dialog\DialogConfiguration.resx">
+		  <Generator>PublicResXFileCodeGenerator</Generator>
+		  <LastGenOutput>DialogConfiguration.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Properties\Window\Dialog\DialogConfigurationNotifier.resx">
+		  <Generator>PublicResXFileCodeGenerator</Generator>
+		  <LastGenOutput>DialogConfigurationNotifier.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Properties\Window\Dialog\DialogDevelopmentRecordViewer.resx">
+		  <Generator>PublicResXFileCodeGenerator</Generator>
+		  <LastGenOutput>DialogDevelopmentRecordViewer.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Properties\Window\Dialog\DialogDropRecordViewer.resx">
+		  <Generator>PublicResXFileCodeGenerator</Generator>
+		  <LastGenOutput>DialogDropRecordViewer.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Properties\Window\Dialog\DialogEquipmentList.resx">
+		  <Generator>PublicResXFileCodeGenerator</Generator>
+		  <LastGenOutput>DialogEquipmentList.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Properties\Window\Dialog\DialogExpChecker.resx">
+		  <Generator>PublicResXFileCodeGenerator</Generator>
+		  <LastGenOutput>DialogExpChecker.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Properties\Window\Dialog\DialogExpeditionCheck.resx">
+		  <Generator>PublicResXFileCodeGenerator</Generator>
+		  <LastGenOutput>DialogExpeditionCheck.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Properties\Window\Dialog\DialogFleetImageGenerator.resx">
+		  <Generator>PublicResXFileCodeGenerator</Generator>
+		  <LastGenOutput>DialogFleetImageGenerator.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
 		<EmbeddedResource Update="Properties\Window\Dialog\DialogShipGroupFilter.resx">
 			<Generator>PublicResXFileCodeGenerator</Generator>
 			<LastGenOutput>DialogShipGroupFilter.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Properties\Window\FormBaseAirCorps.resx">
+		  <Generator>PublicResXFileCodeGenerator</Generator>
+		  <LastGenOutput>FormBaseAirCorps.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Properties\Window\FormBattle.resx">
+		  <Generator>PublicResXFileCodeGenerator</Generator>
+		  <LastGenOutput>FormBattle.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Properties\Window\FormBrowserHost.resx">
+		  <Generator>PublicResXFileCodeGenerator</Generator>
+		  <LastGenOutput>FormBrowserHost.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Properties\Window\FormCompass.resx">
+		  <Generator>PublicResXFileCodeGenerator</Generator>
+		  <LastGenOutput>FormCompass.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Properties\Window\FormDock.resx">
+		  <Generator>PublicResXFileCodeGenerator</Generator>
+		  <LastGenOutput>FormDock.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Properties\Window\FormFleet.resx">
+		  <Generator>PublicResXFileCodeGenerator</Generator>
+		  <LastGenOutput>FormFleet.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Properties\Window\FormFleetOverview.resx">
+		  <Generator>PublicResXFileCodeGenerator</Generator>
+		  <LastGenOutput>FormFleetOverview.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Properties\Window\FormFleetPreset.resx">
+		  <Generator>PublicResXFileCodeGenerator</Generator>
+		  <LastGenOutput>FormFleetPreset.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Properties\Window\FormHeadQuarters.resx">
+		  <Generator>PublicResXFileCodeGenerator</Generator>
+		  <LastGenOutput>FormHeadQuarters.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Properties\Window\FormInformation.resx">
+		  <Generator>PublicResXFileCodeGenerator</Generator>
+		  <LastGenOutput>FormInformation.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Properties\Window\FormMain.resx">
+		  <Generator>PublicResXFileCodeGenerator</Generator>
+		  <LastGenOutput>FormMain.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Properties\Window\FormQuest.resx">
+		  <Generator>PublicResXFileCodeGenerator</Generator>
+		  <LastGenOutput>FormQuest.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Properties\Window\FormShipGroup.resx">
+		  <Generator>PublicResXFileCodeGenerator</Generator>
+		  <LastGenOutput>FormShipGroup.Designer.cs</LastGenOutput>
 		</EmbeddedResource>
 		<EmbeddedResource Update="Window\Dialog\DialogExpeditionCheck.resx">
 			<Generator>ResXFileCodeGenerator</Generator>
@@ -263,6 +508,9 @@
 		<EmbeddedResource Update="Window\Dialog\DialogRes.resx">
 			<Generator>ResXFileCodeGenerator</Generator>
 			<LastGenOutput>DialogRes.Designer.cs</LastGenOutput>
+		</EmbeddedResource>
+		<EmbeddedResource Update="Window\FormMain.resx">
+		  <Generator></Generator>
 		</EmbeddedResource>
 		<EmbeddedResource Update="Window\GeneralRes.resx">
 			<Generator>PublicResXFileCodeGenerator</Generator>
